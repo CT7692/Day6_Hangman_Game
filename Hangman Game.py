@@ -1,4 +1,6 @@
 
+import secrets
+
 word_list = ["aardvark", "baboon", "camel"]
 
 phase1 = '''+---+
@@ -58,9 +60,7 @@ you_lose = ''' +---+
 ========='''
 
 phase_list = [phase1, phase2, phase3, phase4, phase5, phase6, you_lose]
-
-import random
-chosen_word = random.choice(word_list)
+chosen_word = secrets.SystemRandom().choice(word_list)
 letter_list = list(chosen_word)
 
 hidden_list = []
